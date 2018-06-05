@@ -2,12 +2,90 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Task 02</title>
 
     <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
+    <header>
+       <div id="desktop-header">
+           <section class="header-top">
+            <p>Fale com a gente - 3003-0494</p>
+            <h1>Frete grátis para todo o Brasil em compras acima de R$119,00</h1>
+            <div class="profile-cart">
+                <p><a href="#">Perfil</a></p>
+                <p><a href="#">Carrinho <span class="cart-qnt">10</span></a></p>
+            </div>
+        </section>
 
+         <nav class="main-menu container">
+            <p class="drop-down-arrow"><a href="#">Cachorros</a></p>
+            <p class="drop-down-arrow"><a href="#">Gatos</a></p>
+            <p class="drop-down-arrow"><a href="#">Pessoas</a></p>
+            <p><a href="index.html"><img src="src/img/zeedog-logo.png" alt="zee dog logo"></a></p>
+            <p><a href="#">Lookbook</a></p>
+            <p><a href="#">Quem Somos</a></p>
+            <p class="drop-down-arrow"><a href="#">Onde Encontrar</a></p>
+        </nav>
+        </div>
+
+        <!-- MOBILE INICIO -->
+        <div id="mobile-header">
+           <div class="destaque">
+                <h1>Frete grátis para todo o Brasil em compras acima de R$119,00</h1>
+            </div>
+            <nav id="mobile-menu" class="container">
+            <div class="mobile-nav">
+                <div class="profile-cart">
+                    <p><span class="cart-qnt">10</span></p>
+                </div>
+                <p><a href=""><img src="src/img/zeedog-logo.png" alt="zee dog logo" class="mobile-logo"></a></p>
+                <div id="menu-btn" class=""></div>
+            </div>
+            </nav>
+            <ul id="menu-list" style="display: none">
+                        <li class="mob-item"><a href="#">Cachorros</a></li>
+                        <li class="mob-item"><a href="#">Gatos</a></li>
+                        <li class="mob-item"><a href="#">Pessoas</a></li>
+                        <li class="mob-item"><a href="#">Lookbook</a></li>
+                        <li class="mob-item"><a href="#">Quem Somos</a></li>
+                        <li class="mob-item"><a href="#">Onde Encontrar</a></li>
+                        <li class="mob-item"><a href="#">Meu Perfil</a></li>
+                        <li class="mob-item"><a href="#">Meu Carrinho</a></li>
+                    </ul>
+
+        </div>
+        <!-- MOBILE FIM -->
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+       <div class="hero-group">
+           <article class="hero-text">
+            <h2>lançamento de inverno</h2>
+            <p>aqueça seu bichano com os</p>
+            <h2><strong>novos moletons</strong></h2>
+        </article>
+            <a href="https://www.zeedog.com.br/moletom-para-cachorros-zee-dog-mafia-158041/p" class="btn-cta">Compre agora</a>
+       </div>
+
+    </section>
+<script src="src/js/jquery-2.1.1.min.js"></script>
+<script>
+    $(window).load(function() {
+        $("#menu-btn").on("click", function() {
+            var c = document.getElementById("menu-list");
+            if(c.style.display == "none") {
+                $(this).addClass("menu-active");
+                c.style.display = "flex";
+            } else {
+                $(this).removeClass("menu-active");
+                c.style.display = "none";
+            }
+        })
+    })
+</script>
 </body>
 </html>
